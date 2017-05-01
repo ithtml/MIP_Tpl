@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="{dede:global.cfg_webname/}">
+<meta name="keywords" content="{dede:global.cfg_webname/}">
+<title>{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/images/base.css" rel="stylesheet" type="text/css">
+<link href="{dede:global.cfg_templets_skin/}/images/layout.css" rel="stylesheet" type="text/css">
+<link rel="apple-touch-icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/templets/wap/sg/css/header.css" rel="stylesheet" type="text/css">
+<link href="/templets/wap/sg/css/swiper.css" rel="stylesheet" type="text/css">
+<script src="/templets/wap/images/jquery.min.js"></script>
+<script type="text/javascript" src="/templets/wap/images/swiper.min.js"></script>
+<script>
+window.onload=function(){
+	inputbox_width = window.innerWidth - 90;
+	document.getElementById("inputbox").style.width=inputbox_width + "px";
+	}
+</script>
+</head>
+<body style="zoom: 1;">
+	<div class="app">
+{dede:include filename="head.htm"/}
+
+<div class="daohang2">【{dede:field name='typename'/}】<div class="pic"><a href="{dede:global.cfg_basehost/}"><img src="{dede:global.cfg_templets_skin/}/images/home.jpg" alt="" /></a></div>
+</div>
+   <div class="w320 mt2">
+   <ul class="e9">
+     
+          
+           {dede:list pagesize='20'}
+				<li>
+					<a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/></a>
+                    <p class="p1"><a href="[field:arcurl/]">[field:title/]</a></p>
+                    <p class="p2">[field:description/]...</p>
+				</li>
+          {/dede:list}
+			</ul>
+            <div class="dede_pages">
+			<ul class="pagelist">
+				{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+			</ul>
+		</div><!-- /pages -->
+   </div>
+   
+{dede:include filename="foot.htm"/}
+</div>
+</body></html>

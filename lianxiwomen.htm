@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="{dede:global.cfg_soft_lang/}">
+  <title>{dede:field.title/}_邯郸都市医疗整形美容</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/flexible.js"></script>
+  <meta content="application/xhtml+xml;charset=gb2312" http-equiv="Content-Type">
+  <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+  <meta content="no-cache" http-equiv="pragma">
+  <meta content="0" http-equiv="expires">
+  <meta content="telephone=no, address=no" name="format-detection">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css" media="all" />
+</head>
+<body>
+  <div class="app">
+{dede:include filename="head_sy.htm"/}
+<!--滚动菜单开始-->
+<div class="diseaseMenu menus relative" id="diseaseMenu">
+  <div class="menuScroll1 menuScroll absolute" id="menuScroll">
+    <ul class="menuScroll1_lists clearfix">
+    {dede:channel type='self' row='8' currentstyle="<li class='active'><a href='~typelink~'><span>~typename~</a></span> </li>"}
+    <li><a href='[field:typelink/]'><span>[field:typename/]</span></a> </li>
+    {/dede:channel}
+    </ul>
+  </div>
+</div>
+<!--滚动菜单结束-->
+<div class="sp_content">
+  <div class="title" id="f1">
+    <h3>来院路线</h3>
+  </div>
+  <div class="body">
+    <p>地 址：邯郸市光明北大街60号(与展览路交叉口)</p>
+    <p><small>本院拥有独立的停车场，自驾车者可从医院大门左边巷道入内停车(凭就诊卡领取免费停车牌)</small></p>
+    <p>乘车路线：</p>
+    <p>
+      公交车9路：火车站 -&gt; 新四中(展览路口下车)</p>
+    <p>
+      公交车69路：铁路大院 -&gt; 新东庄小区(光明路口下车)</p>
+    <p>
+      公交车环205路：河北工程大学 -&gt; 河北工程大学(展览路口下车)</p>
+    <p>
+    <p>地图：<a href="/map.html" style="color:#663399">[点击查看地图]</a></p>
+  </div>
+  <div class="title" id="f2"><h3>联系方式</h3></div>
+  <div class="body">
+    <p>咨询热线：0310-3082777/3082707&nbsp;<a href="tel:0310-3082777" style="color:#663399">[点击拨打]</a></p>
+    <p>企业ＱＱ：996100158&nbsp;<a href="mqqwpa://im/chat?chat_type=wpa&uin=996100158&version=1&src_type=web&web_src=oicqzone.com" style="color:#663399">[点击QQ对话]</a>(不支持在微信中操作)</p>
+    <!--<p>医院邮箱：hy806@126.com</p>-->
+    <p>网站网址：<a href="http://m.hddszx.com" style="color:#663399">http://m.hddszx.com</a></p>
+  </div>
+</div>
+{dede:include filename="foot_sy.htm"/}
+</div>
+</body>
+</html>

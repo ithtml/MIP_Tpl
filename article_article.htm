@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <!--TODO: canonical href需要替换成原页面url-->
+    <link rel="canonical" href="https://m.hddszx.com">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
+    <title>{dede:global.cfg_webname/}</title>
+    <style mip-custom>
+        .content {
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        
+        h1.title {
+            font-size: 28px;
+            color: #000;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .date {
+            /*font-size: 1.6rem;*/
+        }
+        
+        .intro {
+            /*font-size: 1.6rem;*/
+            padding: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            -moz-box-shadow: 0 0 9px rgba(0, 0, 0, .2);
+            -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 9px rgba(0, 0, 0, .2);
+            border-radius: 8px;
+        }
+        
+        .content_c {
+            padding: 10px;
+            /*font-size: 1.6rem;*/
+        }
+    </style>
+</head>
+
+<body>
+
+    {dede:include filename="head.htm"/}
+
+
+    <div class="content">
+        <div class="news_title">
+            <h1 class="title">{dede:field.title/}</h1>
+            <p class="date text-right">{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</p>
+        </div>
+
+        <div class="intro">
+            {dede:field.description runphp='yes'} if(@me
+            <>'' )@me = ' '.@me.' '; {/dede:field.description}
+                <!--[field:description function='cn_substr(@me,80)'/] -->
+        </div>
+        <div class="content_c">
+            {dede:field.body/} {dede:field.vote/} (责任编辑：{dede:adminname/})
+        </div>
+    </div>
+
+    {dede:include filename="foot.htm"/}
+
+</body>
+
+</html>

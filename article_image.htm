@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <!--TODO: canonical href需要替换成原页面url-->
+    <link rel="canonical" href="https://m.hddszx.com">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
+    <title>{dede:global.cfg_webname/}</title>
+    <style mip-custom>
+
+    </style>
+</head>
+
+<body>
+
+    {dede:include filename="head.htm"/}
+
+    <div class="content">
+        {dede:field name='imgurls' alt='图片输出区'}
+                [field:pagestyle runphp='yes'] @me= (@me==3 ? '<li>' : '');[/field:pagestyle]
+                <a href='[field:linkurl/]' [field:pagestyle runphp='yes'] @me= (@me==3 ? 'class="pic"' : ''); [/field:pagestyle]>
+                  <img src='[field:imgsrc/]' id='bigimg' [field:imgwidth /] alt='[field:alttext /]' border='0' />
+                </a>
+                <a href='[field:linkurl/]' [field:pagestyle runphp='yes']@me = (@me==3 ? 'class="title"' : '');[/field:pagestyle]>
+                	[field:title /]
+                </a>
+                [field:pagestyle runphp='yes'] @me = (@me==3 ? '</li>' : ''); [/field:pagestyle]
+             {/dede:field}
+        
+        {dede:field.body/} {dede:field.vote/} (责任编辑：{dede:adminname/})
+    </div>
+
+    {dede:include filename="foot.htm"/}
+
+</body>
+
+</html>

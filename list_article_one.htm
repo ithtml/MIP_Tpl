@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="{dede:global.cfg_soft_lang/}">
+    <title>{dede:field.typename /}_邯郸都市医疗整形美容</title>
+    <meta name="description" content="{dede:global.cfg_description/}"/>
+    <meta name="keywords" content="{dede:global.cfg_keywords/}"/>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/flexible.js"></script>
+    <meta content="application/xhtml+xml;charset=gb2312" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css" media="all"/>
+
+</head>
+
+<body>
+<div class="app">
+    {dede:include filename="head_sy.htm"/}
+    <div class="diseaseMenu menus relative" id="diseaseMenu">
+        <div class="menuScroll1 menuScroll absolute" id="menuScroll">
+            <ul class="menuScroll1_lists clearfix">
+                {dede:channel type='son' row='8' currentstyle="
+                <li class='active'><a href='~typelink~'><span>~typename~</span></a></li>
+                "}
+                <li><a href='[field:typelink/]'><span>[field:typename/]</span></a></li>
+                {/dede:channel}
+            </ul>
+        </div>
+    </div>
+    {dede:include filename="flash.htm"/}
+    <div class="arclist">
+        <h2>{dede:field name='typename'/}</h2>
+        <div class="yd">
+            {dede:arclist flag='p' row='5' titlelen='32' orderby ='pubdate'}
+            <div class="nr">
+                <a href="[field:arcurl/]">
+                    <div class="img" style="width: 30%;">
+                        <img src="[field:picname/]" alt=""  >
+                    </div>
+                    <div class="nrz">
+                        <h3>[field:title/]</h3>
+                        <div class="nrwz">[field:description function='cn_substr(@me,100)'/]...</div>
+                    </div>
+                </a>
+            </div>
+            {/dede:arclist}
+        </div>
+    </div>
+
+    {dede:include filename="foot_sy.htm"/}
+</div>
+<script>
+    var swiper = new Swiper('.banner_home', {
+        pagination: '.swiper-pagination',
+        autoplay: 2500,
+        loop: true
+    });
+</script>
+
+</body>
+
+</html>

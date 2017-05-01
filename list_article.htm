@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <!--TODO: canonical href需要替换成原页面url-->
+    <link rel="canonical" href="https://m.hddszx.com">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <title>{dede:global.cfg_webname/}</title>
+    <style mip-custom>
+        .panel {
+            background: #333366;
+            /*margin-top: 10px;*/
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .panel h2 {
+            /*width: 8.75rem;*/
+            height: 20px;
+            line-height: 20px;
+            clear: both;
+            font-size: 14px;
+            color: #f7e195;
+            margin: 10px 0 10px 10px;
+            border-left: #f7e195 solid 2px;
+            padding-left: 10px;
+        }
+        
+        .panel .main {
+            background: #fff;
+        }
+        
+        .panel a {
+            color: #000;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 15px;
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .panel .img {
+            margin-right: .8em;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .panel .wz {
+            -webkit-box-flex: 4;
+            -webkit-flex: 4;
+            flex: 4;
+            min-width: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    {dede:include filename="head.htm"/}
+
+    <!--首页幻灯-->
+    <mip-carousel autoplay layout="responsive" width="640" height="520">
+        {dede:arclist flag='c' addfields='link' channelid='17' typeid ='203' isweight='Y' orderby='weight'}
+        <a href="[field:link /]">
+            <mip-img src="[field:litpic/]" /></mip-img>
+        </a>
+        {/dede:arclist}
+    </mip-carousel>
+    <!--首页幻灯END-->
+    <div class="panel">
+        <h2>{dede:field name='typename'/}</h2>
+        <div class="main">
+            {dede:arclist row='5' titlelen='32' orderby ='pubdate'}
+            <a href="[field:arcurl/]">
+                <div class="img">
+                    <mip-img layout="responsive" width="125" height="114" src="[field:picname/]" alt=""></mip-img>
+                </div>
+                <div class="wz">
+                    <h5>[field:title/]</h5>
+                    <div class="nrwz">[field:description function='cn_substr(@me,100)'/]...</div>
+                </div>
+                <div class="clear"></div>
+            </a>
+            {/dede:arclist}
+        </div>
+    </div>
+    <section class="button">
+        <a href="//m.hddszx.com" target="_blank">我要完美蜕变</a>
+    </section>
+    <section class="warning">
+        <h3>郑重声明</h3>
+        <p>近期发现某些不良机构恶意盗用本院模特/顾客对比照的现象。现向社会郑重声明！都市整形美容所有模特均为签约模特，顾客形象对比视频照片均为都市医生团队真实案例，且有形象签约协议，针对盗用本院签约模特的行为，都市整形保留对其追究法律责任的权利!
+            <br>
+            <span>邯郸都市整形医院</span>
+            <div class="clear"></div>
+        </p>
+    </section>
+    {dede:include filename="foot.htm"/}
+</body>
+
+</html>

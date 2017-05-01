@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="{dede:global.cfg_soft_lang/}">
+    <title>{dede:field.seotitle /}_邯郸都市医疗整形美容</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <script src="{dede:global.cfg_templets_skin/}/js/flexible.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css" media="all" />
+  
+
+</head>
+
+<body>
+    <div class="app">
+        {dede:include filename="head_sy.htm"/}
+        <div class="sp_content vv">
+            <div class="video-list">
+                {dede:list pagesize='12'titlelen='200'}
+                <div class="col">
+                    <a href="[field:arcurl/]" class="pic">
+                        <div class="img">
+                            <img src="[field:litpic/]" alt="[field:title/]" />
+                            <div class="play-btn"><img src="/templets/wap/images/play_btn.png"/></div>
+                        </div>
+                        <p>[field:title function='( cn_substr("@me",21))' /]</p>
+                    </a>
+                </div>
+                {/dede:list}
+                <div class="clear"></div>
+            </div>
+            <ul class="pagination">
+                {dede:pagelist listitem="info,pre,next,pageno" listsize="5"/}
+            </ul>
+        </div>
+        {dede:include filename="foot_sy.htm"/}
+    </div>
+    
+    var swiper = new Swiper('.banner_home',{
+        pagination: '.swiper-pagination',
+        autoplay: 2500,
+        loop: true
+    });
+    </script>
+
+</body>
+
+</html>

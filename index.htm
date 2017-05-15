@@ -12,21 +12,63 @@
     <style mip-custom>
         /*首页内容*/
         
-        .navs>div.item {
-            width: 25%;
-            min-width: 25%;
-            padding: 5px;
+        .navs div {
+            padding: 10px;
         }
         
-        .items>div.item {
-            width: 33.33%;
-            min-width: 33.33%;
+        .navs>div>a {
+            display: block;
+        }
+        /*导航按钮*/
+        
+        .items>div {
             padding: 15px;
         }
         
-        .items>div.item .mip-img-subtitle {
+        .items div[self=size-1of3]:nth-child(1) {
+            background: #726abd;
+        }
+        
+        .items div[self=size-1of3]:nth-child(2) {
+            background: #3bc7c7;
+        }
+        
+        .items div[self=size-1of3]:nth-child(2) {
+            background: #3bc7c7;
+        }
+        
+        .items div[self=size-1of3]:nth-child(3) {
+            background: #f17782;
+        }
+        
+        .items div[self=size-1of3]:nth-child(4) {
+            background: #ff5dac;
+        }
+        
+        .items div[self=size-1of3]:nth-child(5) {
+            background: #e4d497;
+        }
+        
+        .items div[self=size-1of3]:nth-child(6) {
+            background: #50c5a7;
+        }
+        
+        .items div[self=size-1of3]:nth-child(7) {
+            background: #8956a1;
+        }
+        
+        .items div[self=size-1of3]:nth-child(8) {
+            background: #8bb9df;
+        }
+        
+        .items div[self=size-1of3]:nth-child(9) {
+            background: #ed9d60;
+        }
+        
+        .items .mip-img-subtitle {
             color: #fff;
         }
+        /*王牌项目*/
         
         section.block {
             background: #639;
@@ -45,69 +87,12 @@
             font-size: 1.3em;
             line-height: 1.5em;
         }
-        
-        .newnavs {
-            width: 100%;
-            display: table;
-        }
-        
-        .newnavs:after {
-            content: '';
-            clear: both;
-        }
-        
-        .newnav {
-            width: 25%;
-            float: left;
-            box-sizing: border-box;
-            padding: 5px;
-        }
-        
-        .item .col {
-            padding: 20px;
-        }
-        
-        .items .item:nth-child(1) {
-            background: #726abd;
-        }
-        
-        .items .item:nth-child(2) {
-            background: #3bc7c7;
-        }
-        
-        .items .item:nth-child(3) {
-            background: #f17782;
-        }
-        
-        .items .item:nth-child(4) {
-            background: #ff5dac;
-        }
-        
-        .items .item:nth-child(5) {
-            background: #e4d497;
-        }
-        
-        .items .item:nth-child(6) {
-            background: #50c5a7;
-        }
-        
-        .items .item:nth-child(7) {
-            background: #8956a1;
-        }
-        
-        .items .item:nth-child(8) {
-            background: #8bb9df;
-        }
-        
-        .items .item:nth-child(9) {
-            background: #ed9d60;
-        }
         /*首页内容END*/
     </style>
 </head>
 
 <body>
-    <mip-zixun swt="1"></mip-zixun>
+    <!--<mip-zixun swt="2"></mip-zixun>-->
     {dede:include filename="head.htm"/}
     <!--首页幻灯-->
     <mip-carousel autoplay layout="responsive" width="640" height="520">
@@ -118,137 +103,135 @@
     </mip-carousel>
     <!--首页幻灯END-->
     <!--导航按钮-->
-    <section layout="rows stretch-stretch" class="navs">
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav1.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">热门项目</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav2.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">活动中心</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav3.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">案例中心</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav4.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">温馨环境</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav5.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">都市简介</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav6.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">专家团队</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav7.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">在线咨询</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
-                <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav8.jpg">
-                </mip-img>
-                <p class="mip-img-subtitle">来院路线</p>
-            </a>
+    <section class="navs">
+        <div layout="rows stretch-stretch">
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav1.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">热门项目</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav2.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">活动中心</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav3.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">案例中心</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav4.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">温馨环境</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav5.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">都市简介</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav6.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">专家团队</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav7.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">在线咨询</p>
+                </a>
+            </div>
+            <div self="size-1of4" class="item">
+                <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
+                    <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav8.jpg">
+                    </mip-img>
+                    <p class="mip-img-subtitle">来院路线</p>
+                </a>
+            </div>
         </div>
     </section>
     <!--导航按钮END-->
 
     <section class="block">
         <header>王牌项目</header>
-        <div layout="rows stretch-stretch" class="items">
-            <div class="item">
+        <div layout="rows stretch-stretch" class="item-wide items">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="双眼皮" src="{dede:global.cfg_templets_skin/}/images/item_01.png">
                     </mip-img>
                     <p class="mip-img-subtitle">双眼皮</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="隆鼻" src="{dede:global.cfg_templets_skin/}/images/item_02.png">
                     </mip-img>
                     <p class="mip-img-subtitle">隆鼻</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="动感丰胸" src="{dede:global.cfg_templets_skin/}/images/item_03.png">
                     </mip-img>
                     <p class="mip-img-subtitle">动感丰胸</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="溶脂塑身" src="{dede:global.cfg_templets_skin/}/images/item_04.png">
                     </mip-img>
                     <p class="mip-img-subtitle">溶脂塑身</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="美白嫩肤" src="{dede:global.cfg_templets_skin/}/images/item_05.png">
                     </mip-img>
                     <p class="mip-img-subtitle">美白嫩肤</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="BOTOX塑形" src="{dede:global.cfg_templets_skin/}/images/item_06.png">
                     </mip-img>
                     <p class="mip-img-subtitle">BOTOX塑形</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="祛痘" src="{dede:global.cfg_templets_skin/}/images/item_07.png">
                     </mip-img>
                     <p class="mip-img-subtitle">祛痘</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="祛斑点痣" src="{dede:global.cfg_templets_skin/}/images/item_08.png">
                     </mip-img>
                     <p class="mip-img-subtitle">祛斑点痣</p>
                 </a>
             </div>
-            <div class="item">
+            <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="精致改脸型" src="{dede:global.cfg_templets_skin/}/images/item_09.png">
-
                     </mip-img>
-
                     <p class="mip-img-subtitle">精致改脸型</p>
-
                 </a>
-
             </div>
-
+        </div>
         </div>
 
 

@@ -47,6 +47,7 @@
             position: relative;
             border-bottom: 1px solid #e5e5e5;
         }
+        
         .panel .img {
             margin-right: .8em;
             -webkit-box-flex: 1;
@@ -65,22 +66,13 @@
 </head>
 
 <body>
+    <mip-zixun swt="2"></mip-zixun>
+    {dede:include filename="head.htm"/} {dede:include filename="flash.htm"/}
 
-    {dede:include filename="head.htm"/}
-
-    <!--首页幻灯-->
-    <mip-carousel autoplay layout="responsive" width="640" height="520">
-        {dede:arclist flag='c' addfields='link' channelid='17' typeid ='203' isweight='Y' orderby='weight'}
-        <a href="[field:link /]">
-            <mip-img src="[field:litpic/]" /></mip-img>
-        </a>
-        {/dede:arclist}
-    </mip-carousel>
-    <!--首页幻灯END-->
     <div class="panel">
         <h2>{dede:field name='typename'/}</h2>
         <div class="main">
-            {dede:arclist row='5' titlelen='32' orderby ='pubdate'}
+            {dede:arclist row='15' titlelen='32' orderby ='pubdate'}
             <a href="[field:arcurl/]">
                 <div class="img">
                     <mip-img layout="responsive" width="125" height="114" src="[field:picname/]" alt=""></mip-img>
@@ -95,7 +87,7 @@
         </div>
     </div>
     <section class="button">
-        <a href="//m.hddszx.com" target="_blank">我要完美蜕变</a>
+        <a href="//m.hddszx.com" data-link="swt" target="_blank">我要完美蜕变</a>
     </section>
     <section class="warning">
         <h3>郑重声明</h3>

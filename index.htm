@@ -10,6 +10,31 @@
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
     <title>{dede:global.cfg_webname/}</title>
     <style mip-custom>
+        .notice {
+            background: #9d0939;
+            color: #fff;
+        }
+        
+        .notice .title {
+            font-size: 1.5em;
+            border-bottom: 1px solid #7a0939;
+        }
+        
+        .notice .list {
+            padding: 10px;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .notice .list a {
+            display: block;
+            color: #fff;
+            border-bottom: 1px dashed hsl(335, 89%, 37%);
+        }
+        
+        .notice .list a span {
+            float: right;
+        }
         /*首页内容*/
         
         .navs div {
@@ -93,18 +118,33 @@
 
 <body>
     <!--<mip-zixun swt="2"></mip-zixun>-->
-    {dede:include filename="head.htm"/}
-    <!--首页幻灯-->
-    <mip-carousel autoplay layout="responsive" width="640" height="520">
-        <mip-img src="{dede:global.cfg_templets_skin/}/images/1.png">
-        </mip-img>
-        <mip-img src="{dede:global.cfg_templets_skin/}/images/2.png">
-        </mip-img>
-    </mip-carousel>
-    <!--首页幻灯END-->
+    {dede:include filename="head.htm"/} {dede:include filename="flash.htm"/}
+
+    <section class="notice">
+        <mip-accordion sessions-key="mip_1">
+            <section>
+                <div class="title" lay="row center-center">
+                    <div class="ico-notice" self="size-x1">
+                        <mip-img layout="responsive" width="40" height="40" src="{dede:global.cfg_templets_skin/}/images/yue.png"></mip-img>
+                    </div>
+                    <div self="size-x7"> 活动中心 </div>
+                    <div self="size-x1"><span class="glyphicon glyphicon-menu-down"></span></div>
+                </div>
+                <div class="list">
+                    <a href="#">3月花漾女神节——都 <span class="date">[5/7/2017]</span></a>
+                    <a href="#">3月花漾女神节——都市整形开献礼 <span class="date">[5/7/2017]</span></a>
+                    <a href="#">3月花漾女神购美温情献礼 <span class="date">[5/7/2017]</span></a>
+                    <a href="#">3月花漾女神节——都市整形开春购美温情献礼 <span class="date">[5/7/2017]</span></a>
+                </div>
+
+            </section>
+        </mip-accordion>
+    </section>
+    <!--最新活动-->
+
     <!--导航按钮-->
     <section class="navs">
-        <div layout="rows stretch-stretch">
+        <div lay="rows stretch-stretch">
             <div self="size-1of4" class="item">
                 <a href="//m.hddszx.com/" target="_blank" on="tap:sidebar.open">
                     <mip-img layout="responsive" width="110" height="110" src="{dede:global.cfg_templets_skin/}/images/newNav1.jpg">
@@ -167,7 +207,7 @@
 
     <section class="block">
         <header>王牌项目</header>
-        <div layout="rows stretch-stretch" class="item-wide items">
+        <div lay="rows stretch-stretch" class="item-wide items">
             <div self="size-1of3">
                 <a href="//m.hddszx.com/zhuanti/syp/" target="_blank">
                     <mip-img layout="responsive" width="350" height="263" alt="双眼皮" src="{dede:global.cfg_templets_skin/}/images/item_01.png">
@@ -318,6 +358,7 @@
 
     {dede:include filename="foot.htm"/}
 
+    <script src="https://mipcache.bdstatic.com/static/v1/mip-accordion/mip-accordion.js"></script>
 </body>
 
 

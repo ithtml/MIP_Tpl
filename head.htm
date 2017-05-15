@@ -1,4 +1,4 @@
-<div layout="row stretch-stretch" class="header">
+<div lay="row stretch-stretch" class="header">
     <div id="hamburger" class="mip-button head-menu" on="tap:sidebar.open" self="size-x1">
         <mip-img layout="responsive" width="50" height="50" src="{dede:global.cfg_templets_skin/}/images/menu.png"></mip-img>
     </div>
@@ -20,10 +20,9 @@
 
 
 <!--项目菜单-->
-<mip-sidebar id='sidebar' layout="nodisplay" class="mip-hidden popMenus" layout="row center-stretch">
-    <div class="pop_title" layout="row center-stretch">
-        <div self="size-x9 center">热门项目</div>
-        <button class="mip-button" on="tap:sidebar.close" self="center">
+<mip-sidebar id='sidebar' layout="nodisplay" class="mip-hidden popMenus" lay="row center-stretch">
+    <div class="pop_title" lay="row center-justify">
+        <button class="mip-button" on="tap:sidebar.close">
             <mip-img
                 layout="responsive"
                 width="49"
@@ -31,7 +30,7 @@
                 src="{dede:global.cfg_templets_skin/}/images/closePopMenu.png">
             </mip-img>
         </button>
-        <div class="clear"></div>
+        <h2>热门项目</h2>
     </div>
     <mip-vd-tabs>
         <section>

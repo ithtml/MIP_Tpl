@@ -889,7 +889,6 @@ mip-sidebar {
 }
 
 .navbar-bottom a {
-    flex: 1;
     text-align: center;
     color: #fff;
 }
@@ -909,11 +908,11 @@ mip-sidebar {
     margin: 0.5rem auto;
 }
 
-.navbar-bottom a:nth-child(1) {
+.navbar-bottom a:nth-child(4) {
     background: #2f314f;
 }
 
-.navbar-bottom a:nth-child(2) {
+.navbar-bottom a:nth-child(1) {
     background: #26c540;
 }
 
@@ -921,7 +920,7 @@ mip-sidebar {
     background: #3366cc;
 }
 
-.navbar-bottom a:nth-child(4) {
+.navbar-bottom a:nth-child(2) {
     background: #ff6005;
 }
 

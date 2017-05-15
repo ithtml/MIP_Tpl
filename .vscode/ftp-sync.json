@@ -1,0 +1,24 @@
+{
+    "remotePath": "./templets/MIP_Tpl/",
+    "host": "139.129.109.233",
+    "username": "mip11dn",
+    "password": "gXw9o2Mg1gtannOK",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}

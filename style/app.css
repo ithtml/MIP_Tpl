@@ -1778,7 +1778,6 @@ mip-sidebar {
 
 .pop_title span {
     display: inline-block;
-    /*float: left;*/
     font-size: 1.5rem;
     line-height: 2.66;
     color: #fff;
@@ -1820,7 +1819,7 @@ mip-sidebar {
 .mip-vd-tabs-nav-li {
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 1.5rem 0;
     color: #fff;
     font-size: 1.6rem;
     line-height: 2;

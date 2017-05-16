@@ -1,50 +1,179 @@
+<!--<div class="video-list">
+    {dede:list pagesize='12'titlelen='200'}
+    <div class="col">
+        <a href="[field:arcurl/]" class="pic">
+            <div class="img">
+                <img src="[field:litpic/]" alt="[field:title/]" />
+                <div class="play-btn"><img src="/templets/wap/images/play_btn.png" /></div>
+            </div>
+            <p>[field:title function='( cn_substr("@me",21))' /]</p>
+        </a>
+    </div>
+    {/dede:list}
+    <div class="clear"></div>
+</div>
+<ul class="pagination">
+    {dede:pagelist listitem="info,pre,next,pageno" listsize="5"/}
+</ul>-->
+
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html mip>
 
 <head>
-    <meta charset="{dede:global.cfg_soft_lang/}">
-    <title>{dede:field.seotitle /}_邯郸都市医疗整形美容</title>
-    <meta name="description" content="{dede:global.cfg_description/}" />
-    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
-    <script src="{dede:global.cfg_templets_skin/}/js/flexible.js"></script>
-    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css" media="all" />
-  
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+    <!--TODO: canonical href需要替换成原页面url-->
+    <link rel="canonical" href="https://m.hddszx.com">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
+    <title>{dede:global.cfg_webname/}</title>
+    <style mip-custom>
+        .filter {
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .filter-list {
+                height: auto;
+                overflow: hidden;
+            }
+        }
+        
+        .filter-link {
+            display: block;
+            padding: 0 25px;
+            color: #333;
+            line-height: 50px;
+            border-top: 1px dotted #e6e6e6;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="app">
-        {dede:include filename="head_sy.htm"/}
-        <div class="sp_content vv">
-            <div class="video-list">
-                {dede:list pagesize='12'titlelen='200'}
-                <div class="col">
-                    <a href="[field:arcurl/]" class="pic">
-                        <div class="img">
-                            <img src="[field:litpic/]" alt="[field:title/]" />
-                            <div class="play-btn"><img src="/templets/wap/images/play_btn.png"/></div>
-                        </div>
-                        <p>[field:title function='( cn_substr("@me",21))' /]</p>
-                    </a>
-                </div>
-                {/dede:list}
-                <div class="clear"></div>
-            </div>
-            <ul class="pagination">
-                {dede:pagelist listitem="info,pre,next,pageno" listsize="5"/}
-            </ul>
-        </div>
-        {dede:include filename="foot_sy.htm"/}
-    </div>
-    
-    var swiper = new Swiper('.banner_home',{
-        pagination: '.swiper-pagination',
-        autoplay: 2500,
-        loop: true
-    });
-    </script>
+    <!--<mip-zixun swt="2"></mip-zixun>-->
+    {dede:include filename="head.htm"/} {dede:include filename="flash.htm"/}
 
+
+    <!--<mip-filter mip-filter-filterWrap=".filter" mip-filter-itemWrap=".filter-item-wrap" mip-filter-enableHash="true">
+        <sidebar class="filter">
+            <div class="filter-result"></div>
+            <ul class="filter-list">
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="all">查看全部</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="眼部整形">眼部整形</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="鼻部整形">鼻部整形</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="微创注射">微创注射</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="溶脂瘦身">溶脂瘦身</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="自体脂肪">自体脂肪</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="胸部整形">胸部整形</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="激光美肤">激光美肤</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="抗衰老">抗衰老</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="面部精雕">面部精雕</div>
+                </li>
+                <li class="filter-title">
+                    <div class="filter-link" data-filtertype="毛发移植">毛发移植</div>
+                </li>
+            </ul>
+        </sidebar>
+        <div class="filter-item-wrap">
+            <div class="filter-item" data-filtertype="面部精雕">
+                <span>ccc</span>
+            </div>
+            <div class="filter-item" data-filtertype="毛发移植">
+                <span>bbb</span>
+            </div>
+            <div class="filter-item" data-filtertype="抗衰老">
+                <span>ddd</span>
+            </div>
+            <div class="filter-item" data-filtertype="抗衰老">
+                <span>eee</span>
+            </div>
+
+        </div>
+    </mip-filter>-->
+
+    <mip-filter mip-filter-filterWrap=".filter" mip-filter-itemWrap=".filter-item-wrap" mip-filter-enableHash="true">
+        <sidebar class="filter">
+            <div class="filter-result"></div>
+            <ul class="filter-list" lay="rows center-justify">
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="all">查看全部<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="鼻部整形">鼻部整形<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="眼部整形">眼部整形<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="微创注射">微创注射<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="溶脂瘦身">溶脂瘦身<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="自体脂肪">自体脂肪<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="胸部整形">胸部整形<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="激光美肤">激光美肤<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="抗衰老">抗衰老<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="面部精雕">面部精雕<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="毛发移植">毛发移植<span class="filter-num"></span></div>
+                </li>
+                <li class="filter-title" self="size-1of4">
+                    <div class="filter-link" data-filtertype="纹绣">纹绣<span class="filter-num"></span></div>
+                </li>
+
+            </ul>
+        </sidebar>
+        <div class="filter-item-wrap">
+            {dede:arclist row='15' titlelen='32' orderby ='pubdate'}
+            <div class="filter-item" data-filtertype="[field:typename/][field:typename2/]">
+                <span>[field:title/]</span>
+            </div>
+            {/dede:arclist}
+            <!--<div class="filter-item" data-filtertype="眼部整形">
+                <span>(layout)广告组件 layout 升级</span>
+            </div>
+            <div class="filter-item" data-filtertype="鼻部整形">
+                <span>鼻部整形</span>
+            </div>-->
+        </div>
+    </mip-filter>
+
+    {dede:include filename="foot.htm"/}
+
+    <script src="https://mipcache.bdstatic.com/static/v1/mip-filter/mip-filter.js"></script>
 </body>
+
+
 
 </html>

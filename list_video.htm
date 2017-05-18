@@ -52,9 +52,7 @@
 
 <body>
     <!--<mip-zixun swt="2"></mip-zixun>-->
-    {dede:include filename="head.htm"/} {dede:include filename="flash.htm"/}
-
-
+    {dede:include filename="head.htm"/}
 
     <mip-filter mip-filter-filterWrap=".filter" mip-filter-itemWrap=".filter-item-wrap" mip-filter-enableHash="true">
         <sidebar class="filter">
@@ -63,61 +61,19 @@
                 <li class="filter-title" self="size-1of4">
                     <div class="filter-link" data-filtertype="all">查看全部<span class="filter-num"></span></div>
                 </li>
+                {dede:channel type='son' noself='yes'}
                 <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="鼻部整形">鼻部整形<span class="filter-num"></span></div>
+                    <div class="filter-link" data-filtertype="[field:typename/]">[field:typename/]<span class="filter-num"></span></div>
                 </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="眼部整形">眼部整形<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="微创注射">微创注射<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="溶脂瘦身">溶脂瘦身<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="自体脂肪">自体脂肪<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="胸部整形">胸部整形<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="激光美肤">激光美肤<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="抗衰老">抗衰老<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="面部精雕">面部精雕<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="毛发移植">毛发移植<span class="filter-num"></span></div>
-                </li>
-                <li class="filter-title" self="size-1of4">
-                    <div class="filter-link" data-filtertype="纹绣">纹绣<span class="filter-num"></span></div>
-                </li>
-
+                {/dede:channel}
             </ul>
         </sidebar>
         <div class="filter-item-wrap">
             {dede:arclist channelid='19' addfields='video' row='15' titlelen='32' orderby ='pubdate'}
             <div class="filter-item" data-filtertype="[field:typename/][field:typename2/]">
-                <div href="[field:typelink/]" on="tap:my-lightbox.open" id="btn-open" role="button" tabindex="0">
+                <a href="[field:arcurl/]" target="_blank">
                     <img src="[field:litpic/]" alt="[field:title/]" />
-                </div>
-                <mip-lightbox id="my-lightbox" layout="nodisplay" class="mip-hidden">
-                    <div class="lightbox">
-                        <mip-video id="my-lightbox" controls layout="responsive" width="640" height="360" src="[field:video/]">
-                            您的浏览器不支持视频播放，可以从
-                            <a href="http://www.baidu.com" target="_blank">这里</a> 下载该视频。
-                        </mip-video>
-                    </div>
-                </mip-lightbox>
-                <!--<mip-video controls layout="responsive" width="640" height="360" src="[field:video/]">
-                    您的浏览器不支持视频播放，可以从
-                    <a href="[field:video/]" target="_blank">这里</a> 下载该视频。
-                </mip-video>-->
-
+                </a>
             </div>
             {/dede:arclist}
         </div>

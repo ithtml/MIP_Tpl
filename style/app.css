@@ -1990,7 +1990,7 @@ section.button {
 
 section.button a {
     background: #26c540;
-    font-size: 2em;
+    font-size: 2rem;
     padding: 0.8em 3.2em;
     border-radius: 8px;
     display: inline-block;

@@ -112,18 +112,6 @@
       font-size: 1.3em;
       line-height: 1.5em;
     }
-    .channel ul {
-      list-style: none;
-    }
-    .channel li {
-      float: left;
-    }
-    .channel li a {
-      padding: 5px 15px;
-    }
-    .channel li a.active {
-      color: #639;
-    }
     /*首页内容END*/
   </style>
 </head>
@@ -131,17 +119,7 @@
 <body>
   <mip-zixun swt="2"></mip-zixun>
   {dede:include filename="head.htm"/}
-
-<div class="channel">
-  <ul>
-    {dede:channel type='son' row='8' currentstyle="
-    <li class='active'><a href='~typelink~'><span>~typename~</span></a></li>
-    "}
-    <li><a href='[field:typelink/]'><span>[field:typename/]</span></a></li>
-    {/dede:channel}
-  </ul>
-</div>
-
+{dede:include filename="channel.htm"/}
 
   <div class="sp_content">
     <div class="title" id="f1">
@@ -171,10 +149,10 @@
       <p>网站网址：<a href="http://m.hddszx.com" style="color:#663399">http://m.hddszx.com</a></p>
     </div>
   </div>
+
+
   {dede:include filename="foot.htm"/}
-  <script src="https://mipcache.bdstatic.com/static/v1/mip-accordion/mip-accordion.js"></script>
+  <script src="https://mipcache.bdstatic.com/static/v1/mip-vd-tabs/mip-vd-tabs.js"></script>
 </body>
-
-
 
 </html>

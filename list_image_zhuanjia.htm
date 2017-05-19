@@ -1,56 +1,176 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html mip>
 
 <head>
-  <meta charset="{dede:global.cfg_soft_lang/}">
-  <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
-  <meta name="description" content="{dede:global.cfg_webname/}">
-  <meta name="keywords" content="{dede:global.cfg_webname/}">
-  <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/flexible.js"></script>
-  <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+  <!--TODO: canonical href需要替换成原页面url-->
+  <link rel="canonical" href="https://m.hddszx.com">
+  <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
+  <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+  <title>{dede:global.cfg_webname/}</title>
+  <style mip-custom>
+    .panel {
+      background: #333366;
+      /*margin-top: 10px;*/
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel h2 {
+      /*width: 8.75rem;*/
+      height: 20px;
+      line-height: 20px;
+      clear: both;
+      font-size: 14px;
+      color: #f7e195;
+      margin: 10px 0 10px 10px;
+      border-left: #f7e195 solid 2px;
+      padding-left: 10px;
+    }
+
+    .panel .main {
+      background: #fff;
+    }
+    /*.panel a {
+      color: #000;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      padding: 15px;
+      position: relative;
+      border-bottom: 1px solid #e5e5e5;
+    }*/
+    /*.panel .img {
+      margin-right: .8em;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      text-align: center;
+    }*/
+    /*.panel .wz {
+      -webkit-box-flex: 4;
+      -webkit-flex: 4;
+      flex: 4;
+      min-width: 0;
+    }*/
+
+    .lists {
+      padding: 5px;
+      position: relative;
+    }
+
+    .lists a {
+      
+      display: block;
+      background: #ececec;
+      box-shadow: 2px 2px 2px #d4d4d4;
+    }
+    /*.touxiang {
+      width: 92px;
+      height: 92px;
+      padding: 5px;
+    }*/
+
+    /*.touxiang img {
+      width: 100%;
+    }*/
+
+    .flag {
+      width: 19px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+    /*.wz {
+      position: absolute;
+      width: 76px;
+      height: 53px;
+      right: 3%;
+      top: 20%;
+    }*/
+    /*@media (min-width:768px) {
+  .lists {
+      padding: 10px;
+    }
+
+    .touxiang {
+      width: 184px;
+      height: 184px;
+    }
+
+    .flag {
+      width: 19px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .wz {
+      position: absolute;
+      width: 235px;
+      height: 106px;
+      right: 5%;
+      top: 23%; 
+    }
+    .wz h3 {
+      margin-bottom: 5px;
+    }
+}*/
+  </style>
 </head>
 
 <body>
-  <div class="app">
-    {dede:include filename="head_sy.htm"/}
-    <!--滚动菜单开始-->
-    <div class="diseaseMenu menus relative" id="diseaseMenu">
-      <div class="menuScroll1 menuScroll absolute" id="menuScroll">
-        <ul class="menuScroll1_lists clearfix">
-          {dede:channel type='self' currentstyle="
-          <li class='active'><a href='~typelink~'><span>~typename~</a></span>
-          </li>"}
-          <li><a href='[field:typelink/]'><span>[field:typename/]</span></a> </li>
-          {/dede:channel}
-        </ul>
-      </div>
-    </div>
-    <!--滚动菜单结束-->
-    <div class="sp_content">
-      <div class="title">
-        <h3>
-          {dede:type}[field:typename /]{/dede:type}
-        </h3>
-      </div>
-      <div class="img-list">
-        {dede:list pagesize='12' titlelen='14' orderby='weight' orderway='asc}
-        <div class="col">
-          <a href="[field:arcurl/]" class="pic" title="[field:title/]">
-            <div class="img">
-              <img src="[field:litpic/]" alt="[field:title/]" />
-            </div>
-            <p>[field:title/]</p>
-          </a>
+
+  {dede:include filename="head.htm"/} {dede:include filename="channel.htm"/}
+
+  <mip-img layout="responsive" width="640" height="515" src="{dede:global.cfg_templets_skin/}/images/zhengxing.jpg"></mip-img>
+
+
+  <div class="panel">
+    <h2>{dede:field name='typename'/}</h2>
+    <div class="main" lay="rows center-center">
+
+      {dede:arclist channelid='20' addfields='flags,goodat' titlelen='32' orderby ='pubdate'}
+      <div class="lists" self="size-1of2">
+        <div class="flag">
+          <mip-img layout="responsive" width="19" height="12" src="/images/[field:flags/].jpg"></mip-img>
         </div>
-        {/dede:list}
-        <div class="clear"></div>
+        <a href="[field:arcurl/]" lay="row stretch-stretch">
+          <div class="touxiang">
+            <mip-img layout="responsive" width="125" height="114" src="[field:picname/]" alt=""></mip-img>
+          </div>
+
+          <div class="wz">
+            <h3>[field:title/]</h3>
+            <p>擅长：[field:goodat/]</p>
+          </div>
+        </a>
       </div>
-      <ul class="pagination">
-        {dede:pagelist listitem="info,pre,next,pageno" listsize="5"/}
-      </ul>
+      {/dede:arclist}
+
     </div>
-    {dede:include filename="foot_sy.htm"/}
   </div>
+
+
+
+  <section class="button">
+    <a href="//m.hddszx.com" target="_blank">我要完美蜕变</a>
+  </section>
+  <section class="warning">
+    <h3>郑重声明</h3>
+    <p>近期发现某些不良机构恶意盗用本院模特/顾客对比照的现象。现向社会郑重声明！都市整形美容所有模特均为签约模特，顾客形象对比视频照片均为都市医生团队真实案例，且有形象签约协议，针对盗用本院签约模特的行为，都市整形保留对其追究法律责任的权利!
+      <br>
+      <span>邯郸都市整形医院</span>
+      <div class="clear"></div>
+    </p>
+  </section>
+  {dede:include filename="foot.htm"/}
 </body>
 
 </html>

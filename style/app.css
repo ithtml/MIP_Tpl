@@ -51,6 +51,7 @@ html {
 body {
     font-size: 1rem;
     font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    
 }
 
 
@@ -1738,7 +1739,9 @@ html {
 
 
 /*bootstrap图标*/
-
+.text-right {
+    text-align: right;
+}
 
 /*全局样式*/
 
@@ -2081,3 +2084,26 @@ section.warning p span {
     font-size: 0.375rem !important;
     line-height: 2;
 }
+/*列表页顶部栏目导航*/
+.channel {
+    background-color: #FFF;
+    -moz-box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+    -webkit-box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+    box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+    }
+    .channel .mip-vd-tabs-nav-view {
+      height: 60px;
+      line-height: 60px;
+    }
+    .channel .mip-vd-tabs-nav-li a {
+      color: #663399;
+    }
+    .channel .mip-vd-tabs-nav-selected {
+      background: transparent;
+      
+    }
+    .channel .mip-vd-tabs-nav-selected a {
+      border-bottom: 2px solid #d70a50;
+      padding-bottom: 5px;
+    }
+    /*列表页顶部栏目导航*/

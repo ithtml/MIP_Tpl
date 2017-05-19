@@ -131,12 +131,10 @@
                     <div self="size-x1"><span class="glyphicon glyphicon-menu-down"></span></div>
                 </div>
                 <div class="list">
-                    <a href="#">3月花漾女神节——都 <span class="date">[5/7/2017]</span></a>
-                    <a href="#">3月花漾女神节——都市整形开献礼 <span class="date">[5/7/2017]</span></a>
-                    <a href="#">3月花漾女神购美温情献礼 <span class="date">[5/7/2017]</span></a>
-                    <a href="#">3月花漾女神节——都市整形开春购美温情献礼 <span class="date">[5/7/2017]</span></a>
-                </div>
-
+                    {dede:arclist typeid="119" flag='h' row='5' titlelen='50' orderby ='pubdate'}
+                    <a href="[field:arcurl/]">[field:title/]<span class="date">[[field:pubdate function='strftime("%m-%d",@me)'/]]</span></a>
+                    {/dede:arclist}
+                </div>           
             </section>
         </mip-accordion>
     </section>

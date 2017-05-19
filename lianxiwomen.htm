@@ -1,60 +1,180 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html mip>
+
 <head>
-  <meta charset="{dede:global.cfg_soft_lang/}">
-  <title>{dede:field.title/}_邯郸都市医疗整形美容</title>
-  <meta name="description" content="{dede:global.cfg_description/}" />
-  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
-  <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/flexible.js"></script>
-  <meta content="application/xhtml+xml;charset=gb2312" http-equiv="Content-Type">
-  <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
-  <meta content="no-cache" http-equiv="pragma">
-  <meta content="0" http-equiv="expires">
-  <meta content="telephone=no, address=no" name="format-detection">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css" media="all" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
+  <!--TODO: canonical href需要替换成原页面url-->
+  <link rel="canonical" href="{dede:global.cfg_basehost/}">
+  <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/style/app.css">
+  <title>{dede:global.cfg_webname/}</title>
+  <style mip-custom>
+    .notice {
+      background: #9d0939;
+      color: #fff;
+    }
+
+    .notice .title {
+      font-size: 1.5em;
+      border-bottom: 1px solid #7a0939;
+    }
+
+    .notice .list {
+      padding: 10px;
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    .notice .list a {
+      display: block;
+      color: #fff;
+      border-bottom: 1px dashed hsl(335, 89%, 37%);
+    }
+
+    .notice .list a span {
+      float: right;
+    }
+    /*首页内容*/
+
+    .navs div {
+      padding: 10px;
+    }
+
+    .navs>div>a {
+      display: block;
+    }
+    /*导航按钮*/
+
+    .items>div {
+      padding: 15px;
+    }
+
+    .items div[self=size-1of3]:nth-child(1) {
+      background: #726abd;
+    }
+
+    .items div[self=size-1of3]:nth-child(2) {
+      background: #3bc7c7;
+    }
+
+    .items div[self=size-1of3]:nth-child(2) {
+      background: #3bc7c7;
+    }
+
+    .items div[self=size-1of3]:nth-child(3) {
+      background: #f17782;
+    }
+
+    .items div[self=size-1of3]:nth-child(4) {
+      background: #ff5dac;
+    }
+
+    .items div[self=size-1of3]:nth-child(5) {
+      background: #e4d497;
+    }
+
+    .items div[self=size-1of3]:nth-child(6) {
+      background: #50c5a7;
+    }
+
+    .items div[self=size-1of3]:nth-child(7) {
+      background: #8956a1;
+    }
+
+    .items div[self=size-1of3]:nth-child(8) {
+      background: #8bb9df;
+    }
+
+    .items div[self=size-1of3]:nth-child(9) {
+      background: #ed9d60;
+    }
+
+    .items .mip-img-subtitle {
+      color: #fff;
+    }
+    /*王牌项目*/
+
+    section.block {
+      background: #639;
+      overflow: hidden;
+    }
+
+    section>header {
+      border-left: #f7e195 solid 3px;
+      color: #f7e195;
+      padding-left: 0.5em;
+      margin: 0.5em;
+      font-size: 2em;
+    }
+
+    .mip-img-subtitle {
+      font-size: 1.3em;
+      line-height: 1.5em;
+    }
+    .channel ul {
+      list-style: none;
+    }
+    .channel li {
+      float: left;
+    }
+    .channel li a {
+      padding: 5px 15px;
+    }
+    .channel li a.active {
+      color: #639;
+    }
+    /*首页内容END*/
+  </style>
 </head>
+
 <body>
-  <div class="app">
-{dede:include filename="head_sy.htm"/}
-<!--滚动菜单开始-->
-<div class="diseaseMenu menus relative" id="diseaseMenu">
-  <div class="menuScroll1 menuScroll absolute" id="menuScroll">
-    <ul class="menuScroll1_lists clearfix">
-    {dede:channel type='self' row='8' currentstyle="<li class='active'><a href='~typelink~'><span>~typename~</a></span> </li>"}
-    <li><a href='[field:typelink/]'><span>[field:typename/]</span></a> </li>
+  <mip-zixun swt="2"></mip-zixun>
+  {dede:include filename="head.htm"/}
+
+<div class="channel">
+  <ul>
+    {dede:channel type='son' row='8' currentstyle="
+    <li class='active'><a href='~typelink~'><span>~typename~</span></a></li>
+    "}
+    <li><a href='[field:typelink/]'><span>[field:typename/]</span></a></li>
     {/dede:channel}
-    </ul>
-  </div>
+  </ul>
 </div>
-<!--滚动菜单结束-->
-<div class="sp_content">
-  <div class="title" id="f1">
-    <h3>来院路线</h3>
+
+
+  <div class="sp_content">
+    <div class="title" id="f1">
+      <h3>来院路线</h3>
+    </div>
+    <div class="body">
+      <p>地 址：邯郸市光明北大街60号(与展览路交叉口)</p>
+      <p><small>本院拥有独立的停车场，自驾车者可从医院大门左边巷道入内停车(凭就诊卡领取免费停车牌)</small></p>
+      <p>乘车路线：</p>
+      <p>
+        公交车9路：火车站 -&gt; 新四中(展览路口下车)</p>
+      <p>
+        公交车69路：铁路大院 -&gt; 新东庄小区(光明路口下车)</p>
+      <p>
+        公交车环205路：河北工程大学 -&gt; 河北工程大学(展览路口下车)</p>
+      <p>
+        <p>地图：<a href="/map.html" style="color:#663399">[点击查看地图]</a></p>
+    </div>
+    <div class="title" id="f2">
+      <h3>联系方式</h3>
+    </div>
+    <div class="body">
+      <p>咨询热线：0310-3082777/3082707&nbsp;<a href="tel:0310-3082777" style="color:#663399">[点击拨打]</a></p>
+      <p>企业ＱＱ：996100158&nbsp;<a href="mqqwpa://im/chat?chat_type=wpa&uin=996100158&version=1&src_type=web&web_src=oicqzone.com"
+          style="color:#663399">[点击QQ对话]</a>(不支持在微信中操作)</p>
+      <!--<p>医院邮箱：hy806@126.com</p>-->
+      <p>网站网址：<a href="http://m.hddszx.com" style="color:#663399">http://m.hddszx.com</a></p>
+    </div>
   </div>
-  <div class="body">
-    <p>地 址：邯郸市光明北大街60号(与展览路交叉口)</p>
-    <p><small>本院拥有独立的停车场，自驾车者可从医院大门左边巷道入内停车(凭就诊卡领取免费停车牌)</small></p>
-    <p>乘车路线：</p>
-    <p>
-      公交车9路：火车站 -&gt; 新四中(展览路口下车)</p>
-    <p>
-      公交车69路：铁路大院 -&gt; 新东庄小区(光明路口下车)</p>
-    <p>
-      公交车环205路：河北工程大学 -&gt; 河北工程大学(展览路口下车)</p>
-    <p>
-    <p>地图：<a href="/map.html" style="color:#663399">[点击查看地图]</a></p>
-  </div>
-  <div class="title" id="f2"><h3>联系方式</h3></div>
-  <div class="body">
-    <p>咨询热线：0310-3082777/3082707&nbsp;<a href="tel:0310-3082777" style="color:#663399">[点击拨打]</a></p>
-    <p>企业ＱＱ：996100158&nbsp;<a href="mqqwpa://im/chat?chat_type=wpa&uin=996100158&version=1&src_type=web&web_src=oicqzone.com" style="color:#663399">[点击QQ对话]</a>(不支持在微信中操作)</p>
-    <!--<p>医院邮箱：hy806@126.com</p>-->
-    <p>网站网址：<a href="http://m.hddszx.com" style="color:#663399">http://m.hddszx.com</a></p>
-  </div>
-</div>
-{dede:include filename="foot_sy.htm"/}
-</div>
+  {dede:include filename="foot.htm"/}
+  <script src="https://mipcache.bdstatic.com/static/v1/mip-accordion/mip-accordion.js"></script>
 </body>
+
+
+
 </html>

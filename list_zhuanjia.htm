@@ -59,69 +59,49 @@
       flex: 4;
       min-width: 0;
     }*/
-
+    .main {
+      overflow: hidden;
+    }
     .lists {
-      padding: 5px;
+      padding: 0.5rem;
+      margin: 1rem 0.5rem;
       position: relative;
+      background: #d0d0d0;
+      box-shadow: 3px 5px 5px #dfdfdf;
     }
 
     .lists a {
-      
+
       display: block;
-      background: #ececec;
-      box-shadow: 2px 2px 2px #d4d4d4;
+      
+    }
+    .lists .wz {
+      padding: 0 1rem 0 1rem;
+    }
+    .lists h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #639;
+      margin-bottom: 1rem;
+    }
+    .lists p {
+      font-size: 1.2rem;
     }
     /*.touxiang {
       width: 92px;
       height: 92px;
       padding: 5px;
     }*/
-
     /*.touxiang img {
       width: 100%;
     }*/
 
     .flag {
-      width: 19px;
-      position: absolute;
-      top: 5px;
-      right: 5px;
+      width: 1.9rem;
+      /*position: absolute;*/
+      /*top: 0.5rem;*/
+      /*right: 0.5rem;*/
     }
-    /*.wz {
-      position: absolute;
-      width: 76px;
-      height: 53px;
-      right: 3%;
-      top: 20%;
-    }*/
-    /*@media (min-width:768px) {
-  .lists {
-      padding: 10px;
-    }
-
-    .touxiang {
-      width: 184px;
-      height: 184px;
-    }
-
-    .flag {
-      width: 19px;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-
-    .wz {
-      position: absolute;
-      width: 235px;
-      height: 106px;
-      right: 5%;
-      top: 23%; 
-    }
-    .wz h3 {
-      margin-bottom: 5px;
-    }
-}*/
   </style>
 </head>
 
@@ -134,21 +114,25 @@
 
   <div class="panel">
     <h2>{dede:field name='typename'/}</h2>
-    <div class="main" lay="rows center-center">
+    <div class="main">
 
-      {dede:arclist channelid='20' addfields='flags,goodat' titlelen='32' orderby ='pubdate'}
-      <div class="lists" self="size-1of2">
-        <div class="flag">
-          <mip-img layout="responsive" width="19" height="12" src="/images/[field:flags/].jpg"></mip-img>
-        </div>
-        <a href="[field:arcurl/]" lay="row stretch-stretch">
-          <div class="touxiang">
-            <mip-img layout="responsive" width="125" height="114" src="[field:picname/]" alt=""></mip-img>
-          </div>
+      {dede:arclist channelid='20' addfields='flags,goodat,pt' titlelen='32' orderby ='pubdate'}
+      <div class="lists">
 
-          <div class="wz">
-            <h3>[field:title/]</h3>
-            <p>擅长：[field:goodat/]</p>
+        <a href="[field:arcurl/]">
+          <div lay="row stretch-stretch">
+            <div class="pic" self="size-1of3">
+              <mip-img layout="responsive" width="300" height="350" src="[field:picname/]"></mip-img>
+            </div>
+            <div class="wz" self="size-2of3">
+              <div class="flag" self="right">
+                <mip-img layout="responsive" width="19" height="12" src="/images/[field:flags/].jpg"></mip-img>
+              </div>
+              <h3 self="right">[field:title/] <small>[field:pt/]</small></h3>
+              <p><strong>擅长：</strong>[field:goodat/]</p>
+            </div>
+            
+
           </div>
         </a>
       </div>
@@ -159,17 +143,6 @@
 
 
 
-  <section class="button">
-    <a href="//m.hddszx.com" target="_blank">我要完美蜕变</a>
-  </section>
-  <section class="warning">
-    <h3>郑重声明</h3>
-    <p>近期发现某些不良机构恶意盗用本院模特/顾客对比照的现象。现向社会郑重声明！都市整形美容所有模特均为签约模特，顾客形象对比视频照片均为都市医生团队真实案例，且有形象签约协议，针对盗用本院签约模特的行为，都市整形保留对其追究法律责任的权利!
-      <br>
-      <span>邯郸都市整形医院</span>
-      <div class="clear"></div>
-    </p>
-  </section>
   {dede:include filename="foot.htm"/}
 </body>
 

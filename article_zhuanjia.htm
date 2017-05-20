@@ -18,7 +18,7 @@
         }
         
         h1.title {
-            font-size: 2rem;
+            font-size: 28px;
             color: #000;
             text-align: center;
             margin-top: 20px;
@@ -28,6 +28,8 @@
         .text-right {
             text-align: right;
         }
+        
+
         
         .intro {
             /*font-size: 1.6rem;*/
@@ -58,10 +60,10 @@
             <p class="date text-right">{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</p>
         </div>
         <div class="content_c">
-            <mip-video poster="{dede:field.picname/}" controls layout="responsive" width="640" height="420" src="{dede:field.video/}">
-            </mip-video>
-            {dede:field.vote/} (责任编辑：{dede:adminname/})
+            {dede:field.body/} {dede:field.vote/} (责任编辑：{dede:adminname/})
         </div>
+    </div>
+
     {dede:include filename="foot.htm"/}
 
 </body>

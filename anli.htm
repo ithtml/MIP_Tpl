@@ -38,39 +38,25 @@
             background: #96c;
         }
         
-        .anli #zhengxing .img,
-        .anli #video .img {
+        .anli #zhengxing .img {
             position: relative;
             width: 50%;
             float: left;
             padding: 10px;
             box-sizing: border-box;
         }
-        
-        .anli .img .player {
-            position: absolute;
-            width: 3rem;
-            height: 3rem;
-            left: 50%;
-            top: 45%;
-            transform: translate(-50%, -45%);
-        }
+
     </style>
 </head>
 
 <body>
 
     {dede:include filename="head.htm"/}
-
+{dede:include filename="channel.htm"/}
 
     <div class="anli">
-        <mip-vd-tabs allow-scroll>
-            <section>
-                <li>整形案例</li>
-                <li>视频案例</li>
-            </section>
             <div id="zhengxing">
-                {dede:arclist typeid='5' row='40' titlelen='40'}
+                {dede:arclist typeid='121' titlelen='40'}
                 <div class="img">
                     <a href="[field:arcurl/]" title="[field:title/]">
                         <mip-img layout="responsive" width="300" height="168" src="[field:litpic/]" alt="[field:title/]"></mip-img>
@@ -80,33 +66,8 @@
                 {/dede:arclist}
                 <div class="clear"></div>
             </div>
-            <div id="video">
-                {dede:arclist typeid='3' row='40' titlelen='40'}
-                <div class="img">
-                    <a href="[field:arcurl/]" title="[field:title/]">
-                        <mip-img layout="responsive" width="300" height="168" src="[field:litpic/]" alt="[field:title/]"></mip-img>
-                        <p class="mip-img-subtitle">[field:title/]</p>
-                        <div class="player">
-                            <mip-img layout="responsive" width="60" height="60" src="/templets/mip/images/player.png"></mip-img>
-                        </div>
-                    </a>
-                </div>
-                {/dede:arclist}
-                <div class="clear"></div>
-            </div>
-        </mip-vd-tabs>
     </div>
-    <section class="button">
-        <a href="//m.hddszx.com" target="_blank">我要完美蜕变</a>
-    </section>
-    <section class="warning">
-        <h3>郑重声明</h3>
-        <p>近期发现某些不良机构恶意盗用本院模特/顾客对比照的现象。现向社会郑重声明！都市整形美容所有模特均为签约模特，顾客形象对比视频照片均为都市医生团队真实案例，且有形象签约协议，针对盗用本院签约模特的行为，都市整形保留对其追究法律责任的权利!
-            <br>
-            <span>邯郸都市整形医院</span>
-            <div class="clear"></div>
-        </p>
-    </section>
+
 
     {dede:include filename="foot.htm"/}
 

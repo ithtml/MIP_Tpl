@@ -2027,29 +2027,29 @@ section.warning p span {
 
 .sp_content .title {
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     background: #663399;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .sp_content h3 {
     line-height: 1.48752;
     clear: both;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #f7e195;
     font-weight: 100;
-    margin-left: 5px;
+    margin-left: 0.5rem;
     border-left: #f7e195 solid 3px;
-    padding-left: 15px;
+    padding-left: 1.5rem;
 }
 
 .body {
-    line-height: 1.84;
+    line-height: 1.4;
     overflow: hidden;
     width: 96%;
-    margin: 10px auto 0;
-    padding: 10px;
+    margin: 1rem auto 0;
+    padding: 1rem;
     color: #3d3f4b;
     box-sizing: border-box;
     -moz-box-shadow: 0 0 9px rgba(0, 0, 0, .2);
@@ -2058,8 +2058,8 @@ section.warning p span {
 }
 
 .body p {
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
 }
 
 .body .img {
@@ -2085,15 +2085,16 @@ section.warning p span {
     line-height: 2;
 }
 /*列表页顶部栏目导航*/
-.channel {
-    background-color: #FFF;
-    -moz-box-shadow: 0 0 8px rgba(34, 23, 20, .5);
-    -webkit-box-shadow: 0 0 8px rgba(34, 23, 20, .5);
-    box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+    .channel {
+        background-color: #FFF;
+        -moz-box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+        -webkit-box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+        box-shadow: 0 0 8px rgba(34, 23, 20, .5);
+        margin-bottom: 1rem;
     }
     .channel .mip-vd-tabs-nav-view {
-      height: 60px;
-      line-height: 60px;
+      height: 6rem;
+      line-height: 6rem;
     }
     .channel .mip-vd-tabs-nav-li a {
       color: #663399;

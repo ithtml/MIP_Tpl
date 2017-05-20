@@ -1,21 +1,3 @@
-<!--<div class="video-list">
-    {dede:list pagesize='12'titlelen='200'}
-    <div class="col">
-        <a href="[field:arcurl/]" class="pic">
-            <div class="img">
-                <img src="[field:litpic/]" alt="[field:title/]" />
-                <div class="play-btn"><img src="/templets/wap/images/play_btn.png" /></div>
-            </div>
-            <p>[field:title function='( cn_substr("@me",21))' /]</p>
-        </a>
-    </div>
-    {/dede:list}
-    <div class="clear"></div>
-</div>
-<ul class="pagination">
-    {dede:pagelist listitem="info,pre,next,pageno" listsize="5"/}
-</ul>-->
-
 <!DOCTYPE html>
 <html mip>
 
@@ -53,7 +35,7 @@
 <body>
     <!--<mip-zixun swt="2"></mip-zixun>-->
     {dede:include filename="head.htm"/}
-
+{dede:include filename="channel.htm"/}
     <mip-filter mip-filter-filterWrap=".filter" mip-filter-itemWrap=".filter-item-wrap" mip-filter-enableHash="true">
         <sidebar class="filter">
             <div class="filter-result"></div>

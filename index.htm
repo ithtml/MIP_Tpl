@@ -14,92 +14,92 @@
             background: #9d0939;
             color: #fff;
         }
-        
+
         .notice .title {
             font-size: 1.5em;
             border-bottom: 1px solid #7a0939;
         }
-        
+
         .notice .list {
             padding: 10px;
             font-size: 1.2em;
             line-height: 1.8;
         }
-        
+
         .notice .list a {
             display: block;
             color: #fff;
             border-bottom: 1px dashed hsl(335, 89%, 37%);
         }
-        
+
         .notice .list a span {
             float: right;
         }
         /*首页内容*/
-        
+
         .navs div {
             padding: 10px;
         }
-        
+
         .navs>div>a {
             display: block;
         }
         /*导航按钮*/
-        
+
         .items>div {
             padding: 15px;
         }
-        
+
         .items div[self=size-1of3]:nth-child(1) {
             background: #726abd;
         }
-        
+
         .items div[self=size-1of3]:nth-child(2) {
             background: #3bc7c7;
         }
-        
+
         .items div[self=size-1of3]:nth-child(2) {
             background: #3bc7c7;
         }
-        
+
         .items div[self=size-1of3]:nth-child(3) {
             background: #f17782;
         }
-        
+
         .items div[self=size-1of3]:nth-child(4) {
             background: #ff5dac;
         }
-        
+
         .items div[self=size-1of3]:nth-child(5) {
             background: #e4d497;
         }
-        
+
         .items div[self=size-1of3]:nth-child(6) {
             background: #50c5a7;
         }
-        
+
         .items div[self=size-1of3]:nth-child(7) {
             background: #8956a1;
         }
-        
+
         .items div[self=size-1of3]:nth-child(8) {
             background: #8bb9df;
         }
-        
+
         .items div[self=size-1of3]:nth-child(9) {
             background: #ed9d60;
         }
-        
+
         .items .mip-img-subtitle {
             color: #fff;
         }
         /*王牌项目*/
-        
+
         section.block {
             background: #639;
             overflow: hidden;
         }
-        
+
         section>header {
             border-left: #f7e195 solid 3px;
             color: #f7e195;
@@ -107,7 +107,7 @@
             margin: 0.5em;
             font-size: 2em;
         }
-        
+
         .mip-img-subtitle {
             font-size: 1.3em;
             line-height: 1.5em;
@@ -119,7 +119,6 @@
 <body>
     <mip-zixun swt="2"></mip-zixun>
     {dede:include filename="head.htm"/} {dede:include filename="flash.htm"/}
-
     <section class="notice">
         <mip-accordion sessions-key="mip_1">
             <section>
@@ -132,9 +131,8 @@
                 </div>
                 <div class="list">
                     {dede:arclist typeid="119" flag='h' row='5' titlelen='50' orderby ='pubdate'}
-                    <a href="[field:arcurl/]">[field:title/]<span class="date">[[field:pubdate function='strftime("%m-%d",@me)'/]]</span></a>
-                    {/dede:arclist}
-                </div>           
+                    <a href="[field:arcurl/]">[field:title/]<span class="date">[[field:pubdate function='strftime("%m-%d",@me)'/]]</span></a>                    {/dede:arclist}
+                </div>
             </section>
         </mip-accordion>
     </section>
@@ -272,88 +270,35 @@
         </div>
         </div>
 
-
-
     </section>
-
     <section class="block">
-
         <header>案例展示</header>
-
         <div class="anli">
-
             <mip-carousel autoplay layout="responsive" width="640" height="348">
-
                 <a href="{dede:global.cfg_basehost/}/gyds/alzx/" target="_blank">
-
                     <mip-img src="{dede:global.cfg_templets_skin/}/images/1.jpg">
-
                     </mip-img>
-
                 </a>
-
                 <a href="{dede:global.cfg_basehost/}/gyds/alzx/" target="_blank">
-
                     <mip-img src="{dede:global.cfg_templets_skin/}/images/2.jpg">
-
                     </mip-img>
-
                 </a>
-
-
 
             </mip-carousel>
-
         </div>
-
     </section>
-
     <section class="block">
-
         <header>特邀专家</header>
-
         <div class="teyue">
 
-
-
         </div>
-
     </section>
-
     <section>
-
         <a href="{dede:global.cfg_basehost/}/gyds/zjtd/" target="_blank">
-
             <mip-img layout="responsive" width="640" height="515" src="{dede:global.cfg_templets_skin/}/images/zhengxing.jpg">
-
             </mip-img>
-
         </a>
-
     </section>
-
-    <section class="button">
-
-        <a href="{dede:global.cfg_basehost/}" target="_blank">我要完美蜕变</a>
-
-    </section>
-
-    <section class="warning">
-
-        <h3>郑重声明</h3>
-
-        <p>近期发现某些不良机构恶意盗用本院模特/顾客对比照的现象。现向社会郑重声明！都市整形美容所有模特均为签约模特，顾客形象对比视频照片均为都市医生团队真实案例，且有形象签约协议，针对盗用本院签约模特的行为，都市整形保留对其追究法律责任的权利!
-
-            <br>
-
-            <span>邯郸都市整形医院</span>
-
-            <div class="clear"></div>
-
-        </p>
-
-    </section>
-
     {dede:include filename="foot.htm"/}
 
     <script src="https://mipcache.bdstatic.com/static/v1/mip-accordion/mip-accordion.js"></script>
